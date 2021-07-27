@@ -120,7 +120,9 @@ mailServer.on('error', (error: Error) => {
   console.error(chalk.redBright(`[ Error ]: ${chalk.red(error.message)}`));
 });
 
-mailServer.start().catch((error: Error) => {
+mailServer.start().then(() => {
+  console.log(chalk.cyanBright(`[ ${chalk.greenBright(new Date().toLocaleTimeString())} ] Connecting To The Mail Server...`));
+}).catch((error: Error) => {
   console.error(chalk.redBright(`[ ${chalk.greenBright('Error')} ]: ${chalk.yellowBright(error.message)}`));
 });
 bot.launch().then(() => {
