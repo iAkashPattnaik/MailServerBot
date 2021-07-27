@@ -18,6 +18,10 @@ First, we will setup the `Gmail Account`.
 
 <kbd>Step 4</kbd> • Click on `Save` button.
 
+<kbd>Step 5</kbd> • Goto [`This Link`](https://accounts.google.com/b/0/DisplayUnlockCaptcha) and click on the `Allow` button.
+
+<kbd>Step 6 (IMP)</kbd> • While deploying the bot, you will get a `Critical security alert` mail from google. Open the mail > Check Activity. Click on `Yes, it was me` button and redeploy your app.
+
 
 # 🚀Deploy
 For Deploying the application, there are these following options available...
