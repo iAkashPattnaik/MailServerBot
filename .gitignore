@@ -1,0 +1,11 @@
+# Files and directories created by me.
+.env
+
+# Conventional directory for build output.
+build/
+
+# Node and yarn
+node_modules/
+package-lock.json
+yarn-error.log
+yarn.lock
