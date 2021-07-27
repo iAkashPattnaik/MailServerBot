@@ -64,8 +64,8 @@ mailServer.on('mail', (mail) => {
 bot.command('start', async (ctx) => {
   const masterUser = await bot.telegram.getChatMember(String(process.env.userId), Number(process.env.userId));
   ctx.reply(
-    'Hi 👋\nI am MailServerBot](https://github.com/BLUE-DEVIL1134/MailServerBotn' +
-    'I am designed by Akash](https://github.com/BLUE-DEVIL1134/)**to send your emails directly to telegram.\n' +
+    'Hi 👋\nI am [MailServerBot](https://github.com/BLUE-DEVIL1134/MailServerBotn' +
+    'I am designed by [Akash](https://github.com/BLUE-DEVIL1134/)**to send your emails directly to telegram.\n' +
     `I am deployed by • ${masterUser.user.first_name}\n` +
     'Currently, i only work for `Gmail`.',
     {
