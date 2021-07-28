@@ -2,7 +2,7 @@
   "name": "main_server_bot",
   "version": "1.0.0",
   "description": "A telegram bot to push emails when they come.",
-  "main": "app/index.js",
+  "main": "app/index.ts",
   "scripts": {
     "test": "ts-node app",
     "start": "node build",
