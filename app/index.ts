@@ -126,7 +126,3 @@ bot.launch().then(() => {
 }).catch((error: Error) => {
   console.error(chalk.redBright(`[ ${chalk.greenBright('Error')} ]: ${chalk.yellowBright(error.message)}`));
 });
-
-// Enable graceful stop
-process.once('SIGINT', () => bot.stop('SIGINT'));
-process.once('SIGTERM', () => bot.stop('SIGTERM'));
