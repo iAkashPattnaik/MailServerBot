@@ -15,4 +15,5 @@ WORKDIR /root/app/
 
 # Run
 RUN npm install
+RUN npm run build
 CMD [ "node", "build" ]
