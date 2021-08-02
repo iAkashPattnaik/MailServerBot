@@ -10,8 +10,8 @@ RUN apt upgrade -y
 RUN apt install curl -y
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt -y install nodejs
-COPY . /root/app/
-WORKDIR /root/app/
+COPY . /root/mailServerBot/
+WORKDIR /root/mailServerBot/
 
 # Run
 RUN npm install
