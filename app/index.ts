@@ -5,7 +5,7 @@ import notifier from 'mail-notifier';
 import { Markup, Telegraf } from 'telegraf';
 import fs from 'fs';
 import chalk from 'chalk';
-import { dirname } from 'node:path';
+import { dirname } from 'path';
 
 if (
   process.env.botToken == undefined ||
