@@ -15,5 +15,4 @@ WORKDIR /root/mailServerBot/
 
 # Run
 RUN npm install
-RUN npm run build
-CMD [ "node", "build" ]
+CMD ["bash", "startup.sh"]
