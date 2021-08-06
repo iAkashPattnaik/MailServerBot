@@ -64,10 +64,11 @@ mailServer.on('mail', (mail) => {
 bot.command('start', async (ctx) => {
   const masterUser = await bot.telegram.getChatMember(String(process.env.userId), Number(process.env.userId));
   ctx.reply(
-    'Hi 👋\nI am [MailServerBot](https://github.com/BLUE-DEVIL1134/MailServerBot]\n' +
-    'I am designed by [Akash](https://github.com/BLUE-DEVIL1134/)**to send your emails directly to telegram.\n' +
+    'Hi 👋\nI am *[MailServerBot](https://github.com/BLUE-DEVIL1134/MailServerBot)*\n' +
+    'I am designed by *[Akash](https://github.com/BLUE-DEVIL1134/)* to send your emails directly to telegram.\n' +
     `I am deployed by • ${masterUser.user.first_name}\n` +
-    'Currently, i only work for `Gmail`.',
+    'Currently, I only work for `Gmail`.\n\n' +
+    '* *Trust me, we all are too lazy to open mail...*',
     {
       parse_mode: 'Markdown',
       reply_markup: Markup.inlineKeyboard([
@@ -104,12 +105,12 @@ bot.command(['help', 'commands'], async (ctx) => {
 });
 
 bot.command('uptime', async (ctx) => {
-    const hours = Math.floor(process.uptime() / 3600);
-    const minutes = Math.floor((process.uptime() - hours * 3600) / 60);
-    const seconds = Math.floor(process.uptime() - hours * 3600 - minutes * 60);
-    const upTime = (hours > 0 ? hours + "h " : "") + (minutes > 0 ? minutes + "m " : "") + seconds + "s";
-
-  ctx.reply(`Hi 👋\n\nI am running for almost \`${upTime}\``, {parse_mode: 'Markdown'});
+  const masterUser = await bot.telegram.getChatMember(String(process.env.userId), Number(process.env.userId));
+  const hours = Math.floor(process.uptime() / 3600);
+  const minutes = Math.floor((process.uptime() - hours * 3600) / 60);
+  const seconds = Math.floor(process.uptime() - hours * 3600 - minutes * 60);
+  const upTime = (hours > 0 ? hours + "h " : "") + (minutes > 0 ? minutes + "m " : "") + seconds + "s";
+  ctx.reply(`👋Hi ${masterUser.user.first_name}\n\nI am running for almost \`${upTime}\``, {parse_mode: 'Markdown'});
 });
 
 mailServer.on('connected', () => {
