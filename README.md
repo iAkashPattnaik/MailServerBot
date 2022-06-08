@@ -5,6 +5,9 @@
 <img src="https://img.shields.io/badge/Version-1.0.0-blueviolet?&logo=github&style=flat" />
 </p>
 
+# :warning: Warning
+This is no longer relevant for `gmail` as Google shut down "`less secure apps`" from May 30, 2022. **But this will still work for other SMTP providing servers.**
+
 # Setup
 First, we will setup the `Gmail Account`.
 
