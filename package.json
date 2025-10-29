@@ -1,36 +1,41 @@
 {
-  "name": "main_server_bot",
-  "version": "1.0.0",
-  "description": "A telegram bot to push emails when they come.",
+  "name": "mailserverbot",
+  "version": "2.0.0",
+  "description": "A Telegram bot that monitors emails and provides SMTP functionality",
   "main": "app/index.ts",
   "scripts": {
-    "test": "ts-node app",
-    "start": "node build",
-    "build": "tsc"
+    "start": "node dist/app/index.js",
+    "dev": "bun run app/index.ts",
+    "dev:ts": "ts-node app/index.ts",
+    "build": "tsc",
+    "watch": "tsc --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BLUE-DEVIL1134/MailServerBot.git"
-  },
-  "keywords": [
-    "email",
-    "nodejs",
-    "telegram"
-  ],
-  "author": "Akash Pattnaik <akashpattnak.github@gmail.com>",
-  "license": "GPL-3.0-only",
-  "bugs": {
-    "url": "https://github.com/BLUE-DEVIL1134/MailServerBot/issues"
-  },
-  "homepage": "https://github.com/BLUE-DEVIL1134/MailServerBot#readme",
   "dependencies": {
-    "chalk": "^4.1.1",
-    "mail-notifier": "^0.5.0",
-    "telegraf": "^4.4.1",
-    "typescript": "^4.3.5"
+    "chalk": "^5.6.2",
+    "dotenv": "^17.2.3",
+    "imapflow": "^1.0.164",
+    "mailparser": "^3.7.5",
+    "nodemailer": "^6.9.8",
+    "telegraf": "^4.16.3"
   },
   "devDependencies": {
-    "@types/node": "^16.4.3",
-    "ts-node": "^10.1.0"
-  }
+    "@types/dotenv": "^8.2.3",
+    "@types/node": "^20.11.5",
+    "@types/nodemailer": "^6.4.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "email",
+    "smtp",
+    "imap",
+    "mail-server"
+  ],
+  "author": "Akash Pattnaik <akashpattnak.github@gmail.com>",
+  "license": "GPL-3.0-only"
 }
