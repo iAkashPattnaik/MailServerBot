@@ -1,82 +1,145 @@
-# <h1 align="center">🚀MailSenderBot📩</h1>
-# <p align="center"><a href="https://github.com/BLUE-DEVIL1134/MailServerBot"><img src="https://github-readme-stats.vercel.app/api/pin?username=BLUE-DEVIL1134&show_icons=true&theme=dracula&hide_border=true&repo=MailServerBot"></a></p>
+# <h1 align="center">🚀MailServerBot📩</h1>
+# <p align="center"><a href="https://github.com/iAkashPattnaik/MailServerBot"><img src="https://github-readme-stats.vercel.app/api/pin?username=iAkashPattnaik&show_icons=true&theme=dracula&hide_border=true&repo=MailServerBot"></a></p>
 <p align="center">
-<a href="https://github.com/BLUE-DEVIL1134/MailSenderBot"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FBLUE-DEVIL1134%2FMailSenderBot%2F&count_bg=%232100FF&title_bg=%2300BBFF&icon=github.svg&icon_color=%23000000&title=Views&edge_flat=false" /></a>
-<img src="https://img.shields.io/badge/Version-1.0.0-blueviolet?&logo=github&style=flat" />
+<a href="https://github.com/iAkashPattnaik/MailSenderBot"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FiAkashPattnaik%2FMailSenderBot%2F&count_bg=%232100FF&title_bg=%2300BBFF&icon=github.svg&icon_color=%23000000&title=Views&edge_flat=false" /></a>
+<img src="https://img.shields.io/badge/Version-2.0.0-blueviolet?&logo=github&style=flat" />
 </p>
 
-# :warning: Warning
-This is no longer relevant for `gmail` as Google shut down "`less secure apps`" from May 30, 2022. **But this will still work for other SMTP providing servers.**
+A modern Telegram bot that monitors your emails and provides SMTP functionality for sending emails directly through Telegram commands.
 
-# Setup
-First, we will setup the `Gmail Account`.
+## ✨ Features
 
-<kbd>Step 1</kbd> • Goto [`This Link`](https://myaccount.google.com/u/0/lesssecureapps) and click on the `Allow less secure apps` button.
+- 📧 **Email Monitoring**: Real-time email notifications via Telegram
+- 📤 **SMTP Support**: Send emails directly through Telegram commands
+- 🔒 **Secure**: Modern authentication and secure connections
+- 🌐 **Multi-Provider**: Works with Gmail, Outlook, and other SMTP/IMAP providers
+- 🚀 **Modern TypeScript**: Fully typed with latest Node.js features
+- 📊 **Status Monitoring**: Check connection status and uptime
+- 🛡️ **Error Handling**: Comprehensive error handling and graceful shutdown
 
-<kbd>Step 2</kbd> • Open Gmail > Settings > Fowarding and POP / IMAP
+## 🔧 Setup
 
-<kbd>Step 3</kbd> • Click on `Enable POP for all mail (even mail that's already been downloaded)` option.
+### Gmail Setup (App Passwords Required)
 
-<kbd>Step 3</kbd> • Click on `Enable IMAP` option.
+Since Google discontinued "less secure apps", you now need to use App Passwords:
 
-<kbd>Step 4</kbd> • Click on `Save` button.
+<kbd>Step 1</kbd> • Enable 2-Factor Authentication on your Google Account
 
-<kbd>Step 5</kbd> • Goto [`This Link`](https://accounts.google.com/b/0/DisplayUnlockCaptcha) and click on the `Allow` button.
+<kbd>Step 2</kbd> • Go to [Google Account Settings](https://myaccount.google.com/security)
 
-<kbd>Step 6 (IMP)</kbd> • While deploying the bot, you will get a `Critical security alert` mail from google. Open the mail > Check Activity. Click on `Yes, it was me` button and redeploy your app.
+<kbd>Step 3</kbd> • Navigate to "2-Step Verification" → "App passwords"
 
+<kbd>Step 4</kbd> • Generate an App Password for "Mail"
 
-# 🚀Deploy
-For Deploying the application, there are these following options available...
+<kbd>Step 5</kbd> • Use this App Password as your `password` environment variable
 
-• [`Local server`](#local-server)<br>
-• [`Qovery`](#qovery)<br>
-• [`Heroku`](#heroku)
+<kbd>Step 6</kbd> • Enable IMAP in Gmail Settings → Forwarding and POP/IMAP
 
+### Other Email Providers
 
-# <img height="32px" src="https://user-images.githubusercontent.com/593151/82310296-7c85ba80-99c4-11ea-88c2-8e6452885e6a.png" />Local Server
-To start the application locally, you can use the following command...
+For other providers (Outlook, Yahoo, etc.), configure the SMTP/IMAP settings accordingly using the optional environment variables.
 
-• Set The [Environmental Variables](#environmental-variables)<br>
->Set them either via editing the source or in your `OS` Env.
+## 🚀 Deploy
+
+### 📱 Bot Commands
+
+- `/start` - Initialize the bot
+- `/help` or `/commands` - Show available commands
+- `/uptime` - Display bot uptime
+- `/license` - Get license information
+- `/send <email> <subject> <message>` - Send email via SMTP
+- `/status` - Check SMTP connection status
+
+### 💻 Local Server
+
 ```bash
-$ npm i
-$ npm build
-$ npm start
+# Install dependencies
+npm install
+
+# Development mode
+npm run dev
+
+# Build and start
+npm run build
+npm start
 ```
-• Star the repository if you like it
 
-# <img height="32px" src="https://uploads-ssl.webflow.com/5de176bfd41c9b0a91bbb0a4/5df74bc4b0ebe7619e4cd55a_qovery_logo_square_dark_margin_32.png" />Qovery
-To deploy the application on Qovery, you can do the following...
+### ☁️ Cloud Deployment
 
-• Fork this repository<br>
-• Create a new application on Qovery<br>
-• Add the forked repository as a remote<br>
-• Set branch to `main`<br>
-• Set The [Environmental Variables](#environmental-variables)<br>
-• Deploy The Application<br>
-• Star the repository if you like it
+The bot can be deployed on various platforms like Heroku, Railway, Render, or any Node.js hosting service.
 
-# <img height="32px" src="https://www.herokucdn.com/favicon.ico" />Heroku
-To deploy the application on Heroku, you can do the following...
+## 🔐 Environment Variables
 
-• Fork this repository<br>
-• Create a new application on Heroku<br>
-• Connect your github account to Heroku<br>
-• Add the forked repository as a remote<br>
-• Set branch to `main`<br>
-• Set The [Environmental Variables](#environmental-variables)<br>
-• Deploy The Application<br>
-• Star the repository if you like it
+### Required Variables
+- `botToken` - Bot token from [@BotFather](https://telegram.dog/BotFather)
+- `userId` - Your Telegram user ID
+- `login` - Your email address
+- `password` - Your email password (App Password for Gmail)
 
-# Environmental Variables
-The following environmental variables are required to deploy the application...
+### Optional SMTP Configuration
+- `SMTP_HOST` - SMTP server host (default: smtp.gmail.com)
+- `SMTP_PORT` - SMTP server port (default: 587)
+- `SMTP_SECURE` - Use secure connection (default: false)
 
-• `botToken` botToken issued by [@BotFather](https://telegram.dog/BotFather)<br>
-• `userId` user_id of the user<br>
-• `login` The email of the user (Gmail only)<br>
-• `password` The password of the user
+### Optional IMAP Configuration
+- `IMAP_HOST` - IMAP server host (default: imap.gmail.com)
+- `IMAP_PORT` - IMAP server port (default: 993)
 
-# Credits
-• [`Anony`](https://github.com/anonyindian) The bot idea was his.<br>
-• [`Akash`](https://github.com/BLUE-DEVIL1134) The bot was built by him.
+## 📋 Example Environment Configuration
+
+```env
+botToken=your_bot_token_here
+userId=your_telegram_user_id
+login=your_email@gmail.com
+password=your_app_password_here
+
+# Optional: Custom SMTP settings
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_SECURE=false
+
+# Optional: Custom IMAP settings
+IMAP_HOST=imap.gmail.com
+IMAP_PORT=993
+```
+
+## 🔄 Migration from v1.x
+
+If you're upgrading from the previous version:
+
+1. Update your `password` to use App Password (for Gmail)
+2. Install new dependencies: `npm install`
+3. Update environment variables as needed
+4. The bot now supports sending emails via `/send` command
+
+## 🛠️ Technical Details
+
+- **Runtime**: Node.js 18+
+- **Language**: TypeScript
+- **Email Libraries**: nodemailer (SMTP), imapflow (IMAP), mailparser
+- **Bot Framework**: Telegraf
+- **Deployment**: Docker support included
+
+## 📦 Dependencies
+
+### Production
+- `telegraf` - Telegram Bot API framework
+- `nodemailer` - SMTP email sending
+- `imapflow` - Modern IMAP client
+- `mailparser` - Email parsing
+- `chalk` - Terminal styling
+
+### Development
+- `typescript` - TypeScript compiler
+- `ts-node` - TypeScript execution
+- `@types/node` - Node.js type definitions
+- `@types/nodemailer` - Nodemailer type definitions
+
+## 🤝 Credits
+
+- [`Anony`](https://github.com/anonyindian) - Original bot idea
+- [`Akash`](https://github.com/iAkashPattnaik) - Bot development and maintenance
+
+## 📄 License
+
+This project is licensed under the GPL-3.0-only License - see the [LICENSE](LICENSE) file for details.
