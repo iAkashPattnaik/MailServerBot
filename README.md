@@ -142,4 +142,4 @@ If you're upgrading from the previous version:
 
 ## 📄 License
 
-This project is licensed under the GPL-3.0-only License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

@@ -245,7 +245,7 @@ bot.command("license", async (ctx) => {
       {
         parse_mode: "Markdown",
         caption:
-          "*License* • `GPL-3.0-only`\n*Author • Akash Pattnaik* <`akashpattnak.github@gmail.com`>",
+          "*License* • `MIT`\n*Author • Akash Pattnaik* <`akashpattnak.github@gmail.com`>",
       }
     );
   } catch (error) {
